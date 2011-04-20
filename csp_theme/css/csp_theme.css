@@ -1,0 +1,393 @@
+/**
+ * HTML Elements
+ */
+ 
+body {
+  font: 0.7em "Trebuchet MS", Arial;
+  background: #c8d0d4 url(../images/bg-body.png) repeat-x top left;
+}
+
+a {
+  color: #2d3e4a;
+}
+
+a:hover {
+  color: #e97504;
+  text-decoration: none;
+}
+
+input.form-submit,
+a.button {
+  padding: 2px 10px 2px 22px;
+  font-family: Arial;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-transform: capitalize;
+  border: 1px solid #cc4c25;
+  background: #eb950f url(../images/orange-arrow.png) no-repeat 10px 50%;
+}
+
+div#search .form-text,
+input.form-text {
+  padding: 3px 5px 2px;
+  border-color: #9dadb5;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+h1.page-title {
+  margin-top: 0;
+}
+
+/**
+ * OpenPublish Overrides
+ */
+ 
+#outer-wrapper {
+  background: none;
+}
+
+#wrapper {
+  padding-top: 30px;
+  padding-bottom: 0;
+  width: 970px;
+  border: none;
+  background: none;
+}
+
+#container {
+  margin: 0;
+  padding: 13px;
+}
+
+body.sidebar-right #center {
+  width: 614px;
+}
+
+body.front-page #container,
+#container {
+  background: #fff;
+}
+
+#header {
+  height: 104px;
+  margin-bottom: 16px;
+}
+
+#logo-area {
+  float: left;
+  height: auto;
+  background: none;
+}
+
+#logo {
+  padding: 0 0 0 13px;
+}
+
+#nav ul.primary-links {
+  clear: none;
+}
+
+#footer {
+  width: auto;
+  padding: 0;
+  color: #fff;
+  border-top: 12px solid #050000;
+  background: #2a2929;
+}
+
+/**
+ * Header
+ */
+ 
+#menu-wrapper {
+  height: 88px;
+}
+
+#header-menu {
+  float: right;
+  padding-bottom: 12px;
+  padding-left: 8px;
+  background: url(../images/bg-details.png) no-repeat bottom left;
+}
+
+#header-menu .menu-wrapper {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #c8d0d4;
+}
+
+#header-menu ul li {
+  float: left;
+  padding-left: 5px;
+  margin: 0 0 0 15px !important;
+  border-left: 5px solid #fff;
+}
+
+#header-menu ul li.first {
+  margin-left: 0 !important;
+}
+
+#header-menu ul li a {
+  color: #13587c;
+  font-size: 1.2em;
+  text-transform: lowercase;
+  text-decoration: none;
+}
+
+#header-menu ul li a:hover,
+#header-menu ul li.active-trail a {
+  color: #d06302;
+}
+
+#header-menu ul li a span {
+  display: block;
+  font-size: 0.8em;
+  color: #7f8a8f;
+}
+
+#header-menu ul li a:hover span,
+#header-menu ul li.active-trail a span {
+  color: #b28c52;
+}
+
+#header-menu ul li.active-trail {
+  border-left: 5px solid #dad9d9;
+}
+
+#search_box_top {
+  margin-right: 10px;
+  padding-top: 0;
+  width: 420px;
+  position: relative;
+  top: 38px;
+  z-index: 3;
+}
+
+div#search .form-text {
+  width: 305px;
+}
+
+div#search .form-item {
+  float: right;
+  width: auto;
+}
+
+#top-search-button {
+  float: right;
+  margin-right: 10px;
+}
+
+#top-search-button input {
+  height: 24px;
+}
+
+/**
+ * Primary Links
+ */
+
+div#nav {
+  border: 0;
+  height: 14px;
+  font-size: 1.1em;
+  background: #fff;
+}
+
+div#nav ul.second-level {
+  font-size: 1.1em;
+}
+
+#nav ul.primary-links ul.second-level li a,
+#nav ul.primary-links ul.second-level li a:hover,
+#nav ul.second-level li {
+  background: transparent;
+}
+
+#nav ul li {
+  background: #10384c;
+}
+
+#nav ul.primary-links li a:link,
+#nav ul.primary-links li a:visited {
+  padding: 6px 10px;
+  color: #fff;
+  text-transform: none;
+  font-weight: bold;
+}
+
+#nav ul.primary-links li.first-level a:hover {
+  background: transparent;
+}
+
+#nav ul.primary-links li a.active {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 14px;
+  background: #c40005 url(../images/menu-red.png) no-repeat 50% 100%;
+}
+
+div#nav ul.primary-links li.first-level:hover a.first-level,
+div#nav ul.primary-links li.first-level:hover a.first-level.active,
+div#nav ul.primary-links li.over a.first-level,
+div#nav ul.primary-links li.over a.active {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 14px;
+  background: #d88402 url(../images/menu-orange.png) no-repeat 50% 100%;
+}
+
+#nav li.off ul,
+#nav li.on ul {
+  top: 27px;
+  height: 27px;
+  background: #e9eef1;
+}
+
+#nav ul.primary-links li:hover ul, 
+#nav ul.primary-links li.over ul {
+  background: #e9eef1;
+}
+
+#nav ul.primary-links li ul,
+#nav ul.primary-links li:hover ul,
+#nav ul.primary-links li.over ul {
+  width: 970px;
+}
+
+#nav ul.primary-links li.on ul a, 
+#nav ul.primary-links li.off ul a  {
+  color: #2d3e4a;
+  padding: 8px 10px;
+}
+
+#nav ul.primary-links li.on ul.second-level a {
+  color: #2d3e4a;
+}
+
+#nav ul.primary-links li ul a:hover, 
+#nav ul.primary-links li a:active {
+  color: #e97504;
+}
+
+#nav ul.primary-links ul.second-level {
+  z-index: 1;
+}
+
+#nav ul.primary-links ul.second-level li a:hover {
+  color: #e97504;
+}
+
+#nav ul.primary-links li ul a.active span {
+  background: transparent;
+  padding: 0;
+  color: #e97504;
+}
+
+#nav ul.primary-links li ul span {
+  padding: 0;
+}
+
+.nav-bg {
+  position: absolute;
+  top: 265px;
+  height: 27px;
+  width: 970px;
+  background: #e9eef1;
+}
+
+/**
+ * Layout
+ */
+ 
+.sidebar h2 {
+  padding-left: 15px;
+  font-family: "Trebuchet MS", Arial;
+  font-size: 1.2em;
+  font-style: normal;
+  background: url(../images/orange-box.png) no-repeat 0 2px;
+}
+ 
+.sidebar h2::after {
+  content: "";
+}
+
+.sidebar p {
+  font-size: 1.1em;
+}
+
+#sidebar-right {
+  width: 300px;
+}
+
+/**
+ * Blocks
+ */
+ 
+.sidebar .block {
+  padding: 0 10px;
+  margin: 0 0 10px 0 !important;
+}
+
+/**
+ * Footer
+ */
+
+.footer-wrapper {
+  margin: 0 auto;
+  width: 960px;
+  padding: 10px 0 50px 10px;
+}
+
+#footer a {
+  color: #b1e2f6;
+}
+
+#footer-sponsors {
+  height: 97px;
+  background: #e1e1e1 url(../images/sponsors.png) no-repeat top center;
+}
+
+#footer-sponsors .footer-wrapper {
+  padding: 0 10px;
+}
+
+#footer-brand {
+  text-align: right;
+  background-color: #545454;
+}
+
+#footer-brand .footer-wrapper {
+  padding: 15px 10px 0;
+  height: 51px;
+  line-height: 1.7em;
+  background: url(../images/csp-dark.png) no-repeat center left;
+}
+
+#footer-brand a {
+  text-transform: uppercase;
+  color: #fff;
+}
+
+#footer-brand a.top {
+  padding-right: 10px;
+  background: url(../images/up-arrow.png) no-repeat center right;
+}
+
+#footer-brand a:hover {
+  color: #ccc;
+}
+
+.footer-message {
+  float: right;
+  text-align: right;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 180%;
+  color: #ccc;
+}
+
+.footer-message strong {
+  font-size: 1.3em;
+  color: #fff;
+}

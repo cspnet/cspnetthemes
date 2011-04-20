@@ -1,0 +1,14 @@
+name = CSP Information Group
+description = Sub Theme of OpenPublish Default Theme.
+version = VERSION
+core = 6.x
+engine = phptemplate
+base theme = openpublish_theme
+version = "6.x-1.19"
+
+stylesheets[all][]   = css/csp_theme.css
+
+skinr[positioning][title] = Positioning
+skinr[positioning][description] = Positioning and size adjustments.
+skinr[positioning][options][1][label] = No padding
+skinr[positioning][options][1][class] = no-padding
