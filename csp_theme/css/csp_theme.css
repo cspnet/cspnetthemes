@@ -361,7 +361,7 @@ div#nav ul.primary-links li.over a.active {
   padding: 15px 10px 0;
   height: 51px;
   line-height: 1.7em;
-  background: url(../images/csp-dark.png) no-repeat center left;
+  background: url(../images/csp-dark.png) no-repeat 10px 50%;
 }
 
 #footer-brand a {
