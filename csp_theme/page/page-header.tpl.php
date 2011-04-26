@@ -45,26 +45,26 @@
     </div>
     
     <?php print $header_menu; ?>
-    
+  </div>
+  
+  <div id="nav-search-wrapper">
+    <div id="nav" class="clearfix">
+      <?php if (isset($expanded_primary_links)): ?>
+        <?php print theme('openpublish_menu', $expanded_primary_links); ?>
+      <?php else: ?> 
+        <?php if (isset($primary_links)) : ?>
+          <?php print theme('links', $primary_links, array('class' => 'links primary-links')) ?>
+        <?php endif; ?>
+        <?php if (isset($secondary_links)) : ?>
+          <?php print theme('links', $secondary_links, array('class' => 'links secondary-links')) ?>
+        <?php endif; ?>
+      <?php endif; ?>      
+    </div> <!-- /#nav -->
     <div id="search_box_top" class="clearfix">
       <?php if ($search_box): ?><?php print $search_box; ?><?php endif; ?>
     </div>
+    <div class="nav-bg"></div>
   </div>
-  
-  
-  <div id="nav" class="clearfix">
-    <?php if (isset($expanded_primary_links)): ?>
-      <?php print theme('openpublish_menu', $expanded_primary_links); ?>
-    <?php else: ?> 
-      <?php if (isset($primary_links)) : ?>
-        <?php print theme('links', $primary_links, array('class' => 'links primary-links')) ?>
-      <?php endif; ?>
-      <?php if (isset($secondary_links)) : ?>
-        <?php print theme('links', $secondary_links, array('class' => 'links secondary-links')) ?>
-      <?php endif; ?>
-    <?php endif; ?>      
-  </div> <!-- /#nav -->
-  <div class="nav-bg"></div>
   
   <div class="clear"></div>	
   <div id="container" class="clearfix">
