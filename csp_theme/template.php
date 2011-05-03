@@ -4,6 +4,13 @@
  * Implementation of phptemplate_page().
  */
 function csp_theme_preprocess_page(&$vars) {
+  if (arg(0) == 'node' && is_numeric(arg(1))) {
+    $node = node_load(arg(1));
+    $vars['html_title'] = check_markup($node->title);
+    $clean_title = strip_tags($node->title);
+    $vars['head_title'] = check_plain($clean_title);
+  }
+  
   $vars['logo'] = '/'. $vars['directory'] .'/images/csp-net.png';
   
   $header_menu = module_invoke('menu', 'block', 'view', 'menu-header-menu');
