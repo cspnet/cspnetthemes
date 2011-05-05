@@ -3,7 +3,7 @@
  */
  
 body {
-  font: 0.7em "Trebuchet MS", Arial;
+  font: 0.8em Arial;
   background: #c8d0d4 url(../images/bg-body.png) repeat-x top left;
 }
 
@@ -18,18 +18,19 @@ a:hover {
 
 input.form-submit,
 a.button {
-  padding: 2px 10px 2px 22px;
+  padding: 0 5px 2px 15px;
   font-family: Arial;
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: bold;
   text-transform: capitalize;
   border: 1px solid #cc4c25;
-  background: #eb950f url(../images/orange-arrow.png) no-repeat 10px 50%;
+  background: #eb950f url(../images/orange-arrow.png) no-repeat 7px 50%;
 }
 
 div#search .form-text,
 input.form-text {
   padding: 3px 5px 2px;
+  margin-left: 10px;
   border-color: #9dadb5;
 }
 
@@ -88,6 +89,7 @@ body.front-page #container,
 
 #nav ul.primary-links {
   clear: none;
+  margin-left: 10px;
 }
 
 #footer {
@@ -103,7 +105,7 @@ body.front-page #container,
  */
  
 #menu-wrapper {
-  height: 88px;
+  height: 82px;
 }
 
 #header-menu {
@@ -121,7 +123,7 @@ body.front-page #container,
 #header-menu ul li {
   float: left;
   padding-left: 5px;
-  margin: 0 0 0 15px !important;
+  margin: 0 0 0 8px !important;
   border-left: 5px solid #fff;
 }
 
@@ -131,8 +133,8 @@ body.front-page #container,
 
 #header-menu ul li a {
   color: #13587c;
-  font-size: 1.2em;
-  text-transform: lowercase;
+  font-size: 1.3em;
+  font-family: Georgia;
   text-decoration: none;
 }
 
@@ -144,7 +146,9 @@ body.front-page #container,
 #header-menu ul li a span {
   display: block;
   font-size: 0.8em;
+  font-family: Arial;
   color: #7f8a8f;
+  text-transform: lowercase;
 }
 
 #header-menu ul li a:hover span,
@@ -152,21 +156,19 @@ body.front-page #container,
   color: #b28c52;
 }
 
-#header-menu ul li.active-trail {
+#header-menu ul li.active-trail,
+#header-menu ul li:hover {
   border-left: 5px solid #dad9d9;
 }
 
 #search_box_top {
   margin-right: 10px;
-  padding-top: 0;
-  width: 420px;
-  position: relative;
-  top: 38px;
-  z-index: 3;
+  padding-top: 5px;
+  width: 390px;
 }
 
 div#search .form-text {
-  width: 305px;
+  width: 285px;
 }
 
 div#search .form-item {
@@ -176,7 +178,6 @@ div#search .form-item {
 
 #top-search-button {
   float: right;
-  margin-right: 10px;
 }
 
 #top-search-button input {
@@ -188,14 +189,12 @@ div#search .form-item {
  */
 
 div#nav {
+  float: left;
   border: 0;
   height: 14px;
   font-size: 1.1em;
+  line-height: 1em;
   background: #fff;
-}
-
-div#nav ul.second-level {
-  font-size: 1.1em;
 }
 
 #nav ul.primary-links ul.second-level li a,
@@ -210,7 +209,7 @@ div#nav ul.second-level {
 
 #nav ul.primary-links li a:link,
 #nav ul.primary-links li a:visited {
-  padding: 6px 10px;
+  padding: 10px 10px 20px;
   color: #fff;
   text-transform: none;
   font-weight: bold;
@@ -223,7 +222,7 @@ div#nav ul.second-level {
 #nav ul.primary-links li a.active {
   position: relative;
   z-index: 2;
-  padding-bottom: 14px;
+  padding-bottom: 18px;
   background: #c40005 url(../images/menu-red.png) no-repeat 50% 100%;
 }
 
@@ -233,14 +232,16 @@ div#nav ul.primary-links li.over a.first-level,
 div#nav ul.primary-links li.over a.active {
   position: relative;
   z-index: 2;
-  padding-bottom: 14px;
+  padding-bottom: 18px;
   background: #d88402 url(../images/menu-orange.png) no-repeat 50% 100%;
 }
 
 #nav li.off ul,
 #nav li.on ul {
-  top: 27px;
-  height: 27px;
+  top: 34px;
+  padding: 0 15px;
+  height: 30px;
+  border-bottom: 1px solid #bdc5c9;
   background: #e9eef1;
 }
 
@@ -252,13 +253,13 @@ div#nav ul.primary-links li.over a.active {
 #nav ul.primary-links li ul,
 #nav ul.primary-links li:hover ul,
 #nav ul.primary-links li.over ul {
-  width: 970px;
+  width: 940px;
 }
 
 #nav ul.primary-links li.on ul a, 
 #nav ul.primary-links li.off ul a  {
   color: #2d3e4a;
-  padding: 8px 10px;
+  padding: 10px 5px 8px;
 }
 
 #nav ul.primary-links li.on ul.second-level a {
@@ -290,9 +291,10 @@ div#nav ul.primary-links li.over a.active {
 
 .nav-bg {
   position: absolute;
-  top: 265px;
-  height: 27px;
+  top: 266px;
+  height: 30px;
   width: 970px;
+  border-bottom: 1px solid #BDC5C9;
   background: #e9eef1;
 }
 
@@ -360,7 +362,8 @@ div#nav ul.primary-links li.over a.active {
 #footer-brand .footer-wrapper {
   padding: 15px 10px 0;
   height: 51px;
-  line-height: 1.7em;
+  line-height: 1.8em;
+  font-size: 0.85em;
   background: url(../images/csp-dark.png) no-repeat 10px 50%;
 }
 
@@ -381,13 +384,13 @@ div#nav ul.primary-links li.over a.active {
 .footer-message {
   float: right;
   text-align: right;
-  font-size: 1em;
+  font-size: 0.85em;
   font-weight: bold;
   line-height: 180%;
   color: #ccc;
 }
 
 .footer-message strong {
-  font-size: 1.3em;
+  font-size: 1.1em;
   color: #fff;
 }
