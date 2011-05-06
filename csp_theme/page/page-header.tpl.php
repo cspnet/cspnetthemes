@@ -45,6 +45,13 @@
     </div>
     
     <?php print $header_menu; ?>
+
+    <div id="header-links">
+      <a href="#" class="image-link twitter" title="Twitter"></a>
+      <a href="#" class="image-link linkedin" title="LinkedIn"></a>
+      <a href="#" class="image-link facebook" title="Facebook"></a>
+      <?php print $header_links; ?>
+    </div>
   </div>
   
   <div id="nav-search-wrapper">

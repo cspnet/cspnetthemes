@@ -4,6 +4,8 @@
  * Implementation of phptemplate_page().
  */
 function csp_theme_preprocess_page(&$vars) {
+  global $user;
+
   if (arg(0) == 'node' && is_numeric(arg(1))) {
     $node = node_load(arg(1));
     $vars['html_title'] = check_markup($node->title);
@@ -15,6 +17,17 @@ function csp_theme_preprocess_page(&$vars) {
   
   $header_menu = module_invoke('menu', 'block', 'view', 'menu-header-menu');
   $vars['header_menu'] = '<div id="header-menu"><div class="menu-wrapper clearfix">'. $header_menu['content'] .'</div></div>';
+
+  if ($user->uid) {
+    $header_links  = t('Welcome, !s', array('!s' => $user->name)) .' &nbsp;|&nbsp; ';
+    $header_links .= l(t('My Account'), 'user') .' &nbsp;|&nbsp; ';
+    $header_links .= l(t('Logout'), 'logout');
+  }
+  else {
+    $header_links  = l(t('Login'), 'user') .' &nbsp;|&nbsp; ';
+    $header_links .= l(t('Join Now'), 'user/register');
+  }
+  $vars['header_links'] = '<div class="text-links">'. $header_links .'</div>';
 }
 
 /**
