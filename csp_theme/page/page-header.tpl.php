@@ -32,12 +32,16 @@
 
 <body <?php print openpublish_body_classes($left, $right, $body_classes); ?> >
   <?php if (!empty($admin)) print $admin; ?>
+
+  <div id="ad-wrapper">
+    <div id="ad-inner-wrapper">
+      <?php print $header; ?>   
+      <div class="clear"></div>
+    </div>
+  </div>
+
   <div id="outer-wrapper"> 
   <div id="wrapper">    	
-  <div id="header">
-    <?php print $header; ?>   
-    <div class="clear"></div>
-  </div> <!-- /#header -->
 
   <div id="menu-wrapper" class="clearfix">
     <div id="logo-area" class="clearfix">	    

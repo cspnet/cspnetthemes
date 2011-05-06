@@ -4,7 +4,7 @@
  
 body {
   font: 0.8em Arial;
-  background: #c8d0d4 url(../images/bg-body.png) repeat-x top left;
+  background-color: #c8d0d4;
 }
 
 a {
@@ -47,11 +47,11 @@ h1.page-title {
  */
  
 #outer-wrapper {
-  background: none;
+  background: url(../images/bg-body.png) repeat-x top left;
 }
 
 #wrapper {
-  padding-top: 30px;
+  padding-top: 10px;
   padding-bottom: 0;
   width: 970px;
   border: none;
@@ -72,11 +72,21 @@ body.front-page #container,
   background: #fff;
 }
 
-#header {
-  min-height: 104px;
+#ad-wrapper {
+  min-height: 133px;
   height: auto !important;
-  height: 104px;
-  margin-bottom: 8px;
+  height: 133px;
+  background-color: #738995;
+}
+
+#ad-inner-wrapper {
+  width: 970px;
+  margin: 0 auto;
+}
+
+#ad-wrapper .block {
+  padding-top: 30px;
+  margin: 0;
 }
 
 #logo-area {
@@ -229,8 +239,13 @@ div#nav {
   background: #fff;
 }
 
-#nav li ul.second-level.empty {
-  display: block !important;
+.nav-bg {
+  background-color: #E9EEF1;
+  border-bottom: 1px solid #BDC5C9;
+  height: 30px;
+  position: relative;
+  top: 34px;
+  width: 970px;
 }
 
 #nav ul.primary-links ul.second-level li a,
