@@ -30,7 +30,7 @@
           </div>
           <div class="footer-wrapper clearfix clear">
             <div class="footer-message">
-              <?php print $footer_message . $footer ?>   
+              <?php print $footer . $footer_message ?>   
             </div>
           </div>     
         </div> <!-- /#footer -->

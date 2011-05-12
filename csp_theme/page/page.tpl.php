@@ -87,13 +87,14 @@
 
 <div id="center" class="clearfix">
 
+  <div id="op-over-content">
+    <?php print $over_content; ?>    
+  </div>
+
   <?php if ($mission): print '<div id="mission">'. $mission .'</div>'; endif; ?>
   
     <?php if ($tabs): print '<div id="tabs-wrapper" class="clear-block">'; endif; ?>
       <?php if ($title && $node->type != 'topichub'): ?>
-      	<div id="add-this" class="float-right clearfix">
-          <?php print openpublish_addthis_widget($head_title); ?>
-      	</div>
         <h1 property="dc:title" class="page-title"><?php print $title; ?></h1>
       <?php endif; ?>
       
@@ -113,16 +114,17 @@
   <?php if ($show_messages && $messages): print $messages; endif; ?>
   <?php print $help; ?>
   
-  <div id="op-over-content">
-    <?php print $over_content; ?>    
-  </div>
-  
   <div id="op-content" typeof="dcmitype:Text">
     <?php print $content ?>
   </div>
   
   <div id="op-under-content">
     <?php print $under_content ?>  
+  </div>
+
+  <div class="clearfix"></div>
+  <div id="bottom-content">
+    <?php print $bottom_content ?>
   </div>
   
 </div> <!-- /#center -->

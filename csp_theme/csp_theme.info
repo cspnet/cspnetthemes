@@ -1,14 +1,23 @@
 name = CSP Information Group
 description = Sub Theme of OpenPublish Default Theme.
-version = VERSION
 core = 6.x
-engine = phptemplate
 base theme = openpublish_theme
-version = "6.x-1.19"
+
+regions[right] = Right Sidebar
+regions[over_content] = On Top of Content
+regions[under_content] = Underneath the Content
+regions[bottom_content] = Bottom of the Content
+regions[inline] = Inline Banner
+regions[header] = Header
+regions[footer] = Footer
 
 stylesheets[all][]   = css/csp_theme.css
 
-skinr[positioning][title] = Positioning
-skinr[positioning][description] = Positioning and size adjustments.
-skinr[positioning][options][1][label] = No padding
-skinr[positioning][options][1][class] = no-padding
+skinr[styling][title] = Styling Adjustments
+skinr[styling][description] = Apply special styling to specific elements.
+skinr[styling][options][1][label] = Square Ad
+skinr[styling][options][1][class] = square-ad
+skinr[styling][options][2][label] = Leaderboard Ad
+skinr[styling][options][2][class] = leaderboard-ad
+skinr[styling][options][3][label] = Subscribe
+skinr[styling][options][3][class] = subscribe

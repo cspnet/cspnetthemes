@@ -31,6 +31,27 @@ function csp_theme_preprocess_page(&$vars) {
 }
 
 /**
+ * Implementation of phptemplate_node().
+ */
+function csp_theme_preprocess_node(&$vars) {
+  if ($vars['node']->type == 'decisions_selection') {
+    if ($vars['page'] == 0) {
+      $vars['page'] = 1;
+      $vars['submitted'] = '';
+      $content  = '<div class="question">'. $vars['node']->title .'</div>';
+      if (!empty($vars['node']->content['decisions']['results']['#value'])) {
+        $mode = _decisions_get_mode($vars['node']);
+        $content .= drupal_get_form('decisions_' . $mode . '_voting_form', $vars['node'], 1, 0);
+      }
+      else {
+        $content .= $vars['node']->content['decisions']['form']['#value'];
+      }
+      $vars['content'] = $content;
+    }
+  }
+}
+
+/**
  * Implementation of theme_menu_item_link().
  */
 function csp_theme_menu_item_link($link) {
@@ -48,5 +69,16 @@ function csp_theme_menu_item_link($link) {
   // Otherwise return a normal link.
   else {
     return l($link['title'], $link['href'], $link['localized_options']);
+  }
+}
+
+/**
+ * Theme function for 'link' text field formatter.
+ */
+function csp_theme_content_taxonomy_formatter_link($element) {
+  if (!empty($element['#item']['value'])) {
+    $term = taxonomy_get_term($element['#item']['value']);
+    _content_taxonomy_localize_term($term);
+    return l($term->name, taxonomy_term_path($term), array('attributes' => array('rel' => 'tag', 'title' => $term->description))) . '<span class="comma">,</span>';
   }
 }
